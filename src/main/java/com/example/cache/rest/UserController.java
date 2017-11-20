@@ -37,7 +37,7 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="/lastname/{name}", produces="application/json",method=RequestMethod.GET)
-	public User saveUsers(@PathVariable String name){
+	public List<User> saveUsers(@PathVariable String name){
 		
 		 return userService.retrieveByLastName(name);
 	}

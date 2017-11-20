@@ -39,7 +39,7 @@ public class UserServiceImplementation {
 		return userRepo.getById(id);
 	}
 	
-	public User retrieveByLastName(String lastName) {
+	public List<User> retrieveByLastName(String lastName) {
 		return userRepo.findByLastName(lastName);
 	}
 	
