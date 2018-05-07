@@ -13,11 +13,11 @@ import com.example.cache.model.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
 	
-	@Cacheable(value="users", cacheManager="cacheManager")
+	@Cacheable(value="users")
 			//, key = "#p0")
 	User getById(Long id);
    
-	@Cacheable(value="users", cacheManager="cacheManagerLastName")
+	@Cacheable(value="users")
 			//, key = "#p0")
 	List<User> findByLastName(String lastName);
 	
